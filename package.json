@@ -1,0 +1,42 @@
+{
+  "name": "avitannebaum.com",
+  "version": "1.0.0",
+  "description": "A full stack portfolio project for alex (avi) tannenbaum",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client_build": "npm run build --prefix client",
+    "server_build": "babel server -s -D -d dist --presets env,stage-0",
+    "clean_builds": "rm -r dist && cd client && rm -r build",
+    "build": "npm run server_build & npm run client_build",
+    "create_deployment_dir": "mkdir <avitannenbaum.com> && cd ./<avitannenbaum.com>&& mkdir client dist && cd ..",
+    "remove_deployment_dir": "rm -r <avitannenbaum.com>",
+    "copy_client_build": "cp -a ./client/build/. ./<avitannenbaum.com>/client/",
+    "copy_server_build": "cp -a ./dist/. ./<avitannenbaum.com>/dist/",
+    "copy_root": "cp -a {package.json,requirements.txt,ecosystem.config.js} ./<avitannenbaum.com>/",
+    "set_deployment": "npm run build && npm run create_deployment_dir && npm run copy_client_build & npm run copy_server_build & npm run copy_root",
+    "zip": "npm run set_deployment && jar -cMf <avitannenbaum.com.zip> <avitannenbaum.com> && npm run clean_builds"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StarShows/avitannenbaum.com.git"
+  },
+  "author": "Alexander (Avi) Tannenbaum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StarShows/avitannenbaum.com/issues"
+  },
+  "homepage": "https://github.com/StarShows/avitannenbaum.com#readme"
+}
