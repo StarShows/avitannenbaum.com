@@ -1,0 +1,21 @@
+
+import ListItem from '../listitems;';
+const InputOnChange = (value) => {
+
+}
+
+const DropdownItems = (devices) => {
+    // Search 
+    
+
+    // List items (filters)
+    <>
+
+    {devices.map({deviceInfo} => {
+     <ListItem deviceInfo={deviceInfo}>
+
+    })}
+
+    </>
+
+} 
