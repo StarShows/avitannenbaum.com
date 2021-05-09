@@ -9,10 +9,13 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
+// Import components
+import  Header  from "../../components/Header";
+
 export default function HomePage() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <div>
+      <Header title="Avi Tannenbaum's Portfolio"></Header>
+    </div>
   );
 }
