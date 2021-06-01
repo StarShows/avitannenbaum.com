@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  background-color: black;
+  line-height: 1.4;
+  cursor: url("../images/babyyodapointer.svg"), default;
+}
+$text-color: #ffe81f;
+a.href {
+  color: $text-color;
+  &:hover{
+    color: black;
+  }
+}
+
+.click {
+  cursor: pointer;
+}
+section.sky {
+  position: fixed;
+}
+
+.layer2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes curtain {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
+
+.link {
+  cursor: url("../images/babyyodapointer.svg"), pointer;
+  text-decoration: underline;
+  color: $text-color;
+}
+.container {
+  perspective: 650px;
+  transform-origin: center;
+  .intro {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    animation: intro 8s ease-out;
+    color: #ffe81f!important;
+    opacity: 0;
+    // transform-origin: 50% 100%;
+    transform: scale(0.01);
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgba(255, 232, 31, 1);
+      color: #000000;
+    }
+    max-height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    border: solid 2px rgba(255, 232, 31, 0.28);
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 50px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    color: rgba(255, 232, 31, 0.8);
+    margin-bottom: 32px;
+  }
+
+  @keyframes intro {
+    0% {
+      opacity: 0;
+      top: 500px;
+      transform: rotateX(20deg) translateZ(100px) scale(3);
+    }
+    5% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+      transform: rotateX(20deg) translateZ(-2500px) scale(2.5);
+    }
+    100% {
+      opacity: 0;
+      top: 0px;
+      transform: rotateX(20deg) translateZ(-2500px) scale(1);
+    }
+  }
+  transform-style: preserve-3d;
+  transform: scale(0.85);
+  position: absolute;
+  border-radius: 25px;
+  background: rgb(153, 0, 0);
+  background: -moz-linear-gradient(
+    148deg,
+    rgba(153, 0, 0, 1) 0%,
+    rgba(17, 16, 0, 1) 50%,
+    rgba(0, 35, 149, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    148deg,
+    rgba(153, 0, 0, 1) 0%,
+    rgba(17, 16, 0, 1) 50%,
+    rgba(0, 35, 149, 1) 100%
+  );
+  background: linear-gradient(
+    148deg,
+    rgba(153, 0, 0, 1) 0%,
+    rgba(17, 16, 0, 1) 50%,
+    rgba(0, 35, 149, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000",endColorstr="#002395",GradientType=1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  color: $text-color!important;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &_inner {
+    border-radius: 4px;
+    padding: 23px;
+    margin: 25px;
+    .footer {
+      .paragraph_footer {
+        .link {
+          span{
+            color: $text-color;
+          }
+        }
+      }
+
+      .hint {
+        font-size: 12px;
+      }
+    }
+    .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      &_image {
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+        height: auto;
+        width: auto;
+        max-width: 250px;
+        padding: 18px;
+        border-radius: 50%;
+        border: solid 6px #ffe81f;
+        box-shadow: 000000 0px 0px 27px 3px;
+        color: #000000;
+      }
+    }
+  }
+  .header {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 232, 31, 1);
+      color: #000000;
+    }
+    &.mobile_only {
+      display: none;
+    }
+    &.click {
+      &:hover {
+        color: #000;
+      }
+      cursor: pointer;
+    }
+    background-color: #000;
+    border-radius: 4px;
+    border: solid 2px rgba(255, 232, 31, 0.28);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+
+    text-align: center;
+    color: rgba(255, 232, 31, 0.8);
+    margin-bottom: 32px;
+    &.h2 {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+  .content {
+    .portfolio_item {
+      .button {
+        width: auto;
+        font-weight: 600;
+        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        line-height: 1.6;
+
+        padding: 10px;
+        background-color: rgba(153, 0, 0, 0.6);
+        transition: background-color 0.3s;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        font-size: 20px;
+        &:hover {
+          background-color: rgba(226, 36, 58, 0.8);
+        }
+      }
+      .paragraph {
+        .link {
+          color: rgba(255, 255, 255, 0.788);
+          font-size: 16px;
+          cursor: pointer;
+          text-decoration: underline;
+          transition: color 0.3s, text-decoration 0.3s;
+          &:hover {
+            text-decoration: none;
+            color: darkgray;
+          }
+          &::before {
+            background-image: url("../images/linkedin_icon.png");
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .container {
+    &_inner {
+      .header {
+        &.mobile_only {
+          display: flex;
+        }
+      }
+      .content {
+        .portfolio_item {
+        }
+      }
+    }
+  }
+}

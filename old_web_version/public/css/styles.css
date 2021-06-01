@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  background-color: black;
+  line-height: 1.4;
+  cursor: url("../images/babyyodapointer.svg"), default; }
+
+a.href {
+  color: #ffe81f; }
+  a.href:hover {
+    color: black; }
+
+.click {
+  cursor: pointer; }
+
+section.sky {
+  position: fixed; }
+
+.layer2 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@keyframes curtain {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    opacity: 0; }
+  100% {
+    display: none; } }
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white; }
+
+.link {
+  cursor: url("../images/babyyodapointer.svg"), pointer;
+  text-decoration: underline;
+  color: #ffe81f; }
+
+.container {
+  perspective: 650px;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: scale(0.85);
+  position: absolute;
+  border-radius: 25px;
+  background: #990000;
+  background: -moz-linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
+  background: -webkit-linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
+  background: linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000",endColorstr="#002395",GradientType=1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  color: #ffe81f !important;
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .container .intro {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    animation: intro 8s ease-out;
+    color: #ffe81f !important;
+    opacity: 0;
+    transform: scale(0.01);
+    max-height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    border: solid 2px rgba(255, 232, 31, 0.28);
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 50px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    color: rgba(255, 232, 31, 0.8);
+    margin-bottom: 32px; }
+    .container .intro:hover {
+      transform: scale(1.1);
+      background-color: #ffe81f;
+      color: #000000; }
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+    top: 500px;
+    transform: rotateX(20deg) translateZ(100px) scale(3); }
+  5% {
+    opacity: 1; }
+  80% {
+    opacity: 1;
+    transform: rotateX(20deg) translateZ(-2500px) scale(2.5); }
+  100% {
+    opacity: 0;
+    top: 0px;
+    transform: rotateX(20deg) translateZ(-2500px) scale(1); } }
+  .container_inner {
+    border-radius: 4px;
+    padding: 23px;
+    margin: 25px; }
+    .container_inner .footer .paragraph_footer .link span {
+      color: #ffe81f; }
+    .container_inner .footer .hint {
+      font-size: 12px; }
+    .container_inner .avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; }
+      .container_inner .avatar_image {
+        transition: all 0.2s ease-in-out;
+        height: auto;
+        width: auto;
+        max-width: 250px;
+        padding: 18px;
+        border-radius: 50%;
+        border: solid 6px #ffe81f;
+        box-shadow: 000000 0px 0px 27px 3px;
+        color: #000000; }
+        .container_inner .avatar_image:hover {
+          transform: scale(1.1); }
+  .container .header {
+    transition: all 0.2s ease-in-out;
+    background-color: #000;
+    border-radius: 4px;
+    border: solid 2px rgba(255, 232, 31, 0.28);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+    color: rgba(255, 232, 31, 0.8);
+    margin-bottom: 32px; }
+    .container .header:hover {
+      transform: scale(1.05);
+      background-color: #ffe81f;
+      color: #000000; }
+    .container .header.mobile_only {
+      display: none; }
+    .container .header.click {
+      cursor: pointer; }
+      .container .header.click:hover {
+        color: #000; }
+    .container .header.h2 {
+      font-size: 20px;
+      font-weight: 300; }
+  .container .content .portfolio_item .button {
+    width: auto;
+    font-weight: 600;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    background-color: rgba(153, 0, 0, 0.6);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 20px; }
+    .container .content .portfolio_item .button:hover {
+      background-color: rgba(226, 36, 58, 0.8); }
+  .container .content .portfolio_item .paragraph .link {
+    color: rgba(255, 255, 255, 0.788);
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s, text-decoration 0.3s; }
+    .container .content .portfolio_item .paragraph .link:hover {
+      text-decoration: none;
+      color: darkgray; }
+    .container .content .portfolio_item .paragraph .link::before {
+      background-image: url("../images/linkedin_icon.png");
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      background-size: contain;
+      background-repeat: no-repeat; }
+
+@media screen and (max-width: 736px) {
+  .container_inner .header.mobile_only {
+    display: flex; } }

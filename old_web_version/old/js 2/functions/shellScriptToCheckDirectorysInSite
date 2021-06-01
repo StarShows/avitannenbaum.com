@@ -1,0 +1,2 @@
+wget --spider -r --no-parent http://avitannenbaum.com/
+ls -l avitannenbaum.com
