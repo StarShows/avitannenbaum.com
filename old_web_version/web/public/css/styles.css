@@ -5,7 +5,7 @@ body {
   cursor: url("../images/babyyodapointer.svg"), default; }
 
 @font-face {
-  font-family: 'Franklin Gothic Condensed';
+  font-family: "Franklin Gothic Condensed";
   src: local("Franklin Gothic Condensed"), url("/fonts/Franklin Gothic Condensed.woff") format("woff"); }
 
 a.href {
@@ -85,11 +85,6 @@ section.sky {
   justify-content: center;
   transform-style: preserve-3d;
   position: absolute;
-  background: #990000;
-  background: -moz-linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
-  background: -webkit-linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
-  background: linear-gradient(148deg, #990000 0%, #111000 50%, #002395 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000",endColorstr="#002395",GradientType=1);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -98,8 +93,6 @@ section.sky {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  position: relative;
   color: rgba(255, 232, 31, 0.8) !important;
   width: 100%;
   margin: 0px;
@@ -109,17 +102,20 @@ section.sky {
   align-items: center; }
   .container .block_grid {
     display: grid;
+    font-size: 30px;
     grid-template-columns: auto;
     grid-column-gap: 20px;
     justify-self: center; }
     .container .block_grid section.block {
       z-index: 3;
       transition: all 0.2s ease-in-out;
+      grid-gap: 20px;
+      max-width: 50%;
       border-radius: 20px;
       padding: 10px;
       display: flex;
       justify-content: center;
-      font-family: 'Franklin Gothic Condensed';
+      font-family: "Franklin Gothic Condensed";
       font-weight: 600;
       line-height: 1.6;
       text-transform: uppercase;
@@ -149,7 +145,7 @@ section.sky {
     font-weight: 600;
     line-height: 1.6;
     font-size: 50px;
-    font-family: 'Franklin Gothic Condensed';
+    font-family: "Franklin Gothic Condensed";
     text-align: center;
     color: rgba(255, 232, 31, 0.8);
     margin-bottom: 32px; }
@@ -182,7 +178,7 @@ section.sky {
   .container .content .portfolio_item .button {
     width: auto;
     font-weight: 600;
-    font-family: 'Franklin Gothic Condensed';
+    font-family: "Franklin Gothic Condensed";
     line-height: 1.6;
     padding: 10px;
     background-color: rgba(153, 0, 0, 0.6);
@@ -215,6 +211,7 @@ section.sky {
 @media screen and (max-width: 736px) {
   .container_inner .block_grid {
     display: grid;
-    grid-template-columns: auto; }
+    grid-template-columns: auto;
+    font-size: 18px; }
   .container_inner .block.mobile_only {
     display: flex; } }

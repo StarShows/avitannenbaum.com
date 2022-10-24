@@ -11,7 +11,7 @@ gtag("config", "UA-42339063-2");
 const updateWebsiteName = () => {
   let websiteName = document.getElementById("Website_Name");
   websiteName.style.color = "#ffe81f";
-  websiteName.innerHTML = window.location.hostname;
+  websiteName.innerHTML = `Welcome to ${window.location.hostname}!`;
 };
 updateWebsiteName();
 
@@ -26,60 +26,25 @@ function navigateTo(url, NewPage) {
   }
 }
 
-// add scroll animation
-// window.addEventListener('scroll', e => {
-//   const falcon = document.getElementById('falcon');
-//   const scrollFraction = getElementScrollFraction(document.getElementById('layer2'));
-//   console.log("maxLogoOffset*scrollFraction", maxLogoOffset*scrollFraction)
-//   falcon.style.bottom = maxLogoOffset*scrollFraction;
-// });
-
-// const scroll = document.getElementById('layer2').addEventListener("scroll",e => {
-//   const falcon = document.getElementById('falcon');
-
-//   console.log('event', e)
-//   falcon.style.bottom = initialVal + "px";
-// });
-// scroll();
-// document.getElementById('layer2').
-// onscroll(e => {
-//   console.log('scroll')
-// });
-
-// let lastKnownScrollPosition = 0;
-// let ticking = false;
-
-// function doSomething(scrollPos) {
-//   // Do something with the scroll position
-//   console.log('scroll position', scrollPos)
-// }
-
-// window.addEventListener('scroll', (e) => {
-//   console.log('scroll')
-//   lastKnownScrollPosition = window.scrollY;
-
-//   if (!ticking) {
-//     window.requestAnimationFrame(() => {
-//       doSomething(lastKnownScrollPosition);
-//       ticking = false;
-//     });
-
-//     ticking = true;
-//   }
-// });
-function setScrollEffects() {
+function falcon_animation() {
   let falcon = document.getElementById('falcon');
-  let layer2 = document.getElementById('main_scroll_layer');
-  layer2.style.backgroundColor = 'white';
+  let text = document.getElementById('block_grid');
+
   const scroll = window.addEventListener("scroll", (scroll) => {
-    console.log('set effect', window.scrollY)
+
     falcon.style.bottom = window.scrollY + 'px';
+å
   });
 }
-setScrollEffects();
 
+function text_animation() {
+  let text = document.getElementById('block_grid');
+  const scroll = window.addEventListener("scroll", (scroll) => {
+    // falcon.style.marginTop = window.scrollY*2 +'px';
+    console.log(window.innerHeight, window.scrollY)
+    text.style.transform = "size("+"-"+window.scrollY*2 +'px';
 
-
-// function getElementScrollFraction(elem){
-//   return elem.scrollTop / (elem.scrollHeight - elem.clientHeight);
-// }
+  });
+}
+// text_animation();
+falcon_animation();
