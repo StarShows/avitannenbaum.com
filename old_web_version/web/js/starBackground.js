@@ -30,8 +30,7 @@ const numStars = 100;
   }
 
   const initialVal = 5;
-  const scroll = window.addEventListener("scroll", (scroll) => {
-    console.log("wow", scroll);
-    star.style.height = initialVal + "px";
-  });
+  // const scroll = window.addEventListener("scroll", (scroll) => {
+  //   star.style.height = initialVal + "px";
+  // });
 })(numStars);

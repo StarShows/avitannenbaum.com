@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "A web portfolio to demonstrait Avi Tannenbaum's web skills.",
+  "description": "A web portfolio to demonstrate Alex Tannenbaum's web skills.",
   "main": "index.js",
   "scripts": {
     "dev": "npm run watch-css",
