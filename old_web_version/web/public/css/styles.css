@@ -49,7 +49,7 @@ section.sky {
     .avatar_image:hover {
       transform: scale(1.1); }
 
-.layer2 {
+.left_body_area {
   position: absolute;
   display: flex;
   justify-content: center;
