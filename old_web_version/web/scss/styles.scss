@@ -25,7 +25,9 @@ section.sky {
   justify-content: center;
   align-items: center;
 }
-
+.button {
+  cursor: pointer;
+}
 @keyframes curtain {
   0% {
     display: block;
@@ -55,7 +57,7 @@ section.sky {
   perspective: 650px;
   transform-origin: center;
   .intro {
-    position: absolute;
+    position: absolute;m
     display: flex;
     z-index: 1;
     animation: intro 8s ease-out;
