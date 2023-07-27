@@ -5,6 +5,10 @@ body {
   cursor: url("../images/babyyodapointer.svg"), default;
 }
 
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: local("Franklin Gothic Condensed"), url("/fonts/Franklin Gothic Condensed.woff") format("woff"); }
+
 a.href {
   color: #ffe81f;
 }
@@ -35,6 +39,14 @@ a.href:hover {
   cursor: pointer;
 }
 
+
+#falcon {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  right: 100px;
+  height: 100px; }
+
 .click {
   cursor: pointer;
 }
@@ -43,7 +55,26 @@ section.sky {
   position: fixed;
 }
 
-.layer2 {
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px; }
+  .avatar_image {
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    width: auto;
+    max-width: 250px;
+    padding: 18px;
+    border-radius: 50%;
+    border: solid 6px #ffe81f;
+    box-shadow: 000000 0px 0px 27px 3px;
+    color: #000000; }
+    .avatar_image:hover {
+      transform: scale(1.1); }
+
+.left_body_area {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -79,11 +110,11 @@ section.sky {
   color: #ffe81f;
 }
 
+
 .container {
-  perspective: 650px;
   transform-origin: center;
+  justify-content: center;
   transform-style: preserve-3d;
-  transform: scale(0.85);
   position: absolute;
   border-radius: 25px;
   background: rgb(153, 0, 0);
@@ -99,9 +130,7 @@ section.sky {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  position: relative;
-  color: #ffe81f !important;
+  color: rgba(255, 232, 31, 0.8) !important;
   width: 100%;
   margin: 0px;
   display: flex;
@@ -135,6 +164,7 @@ section.sky {
 .container .intro:hover {
   color: #000000;
 }
+
 @keyframes intro {
   0% {
     opacity: 0;
@@ -258,3 +288,4 @@ section.sky {
 }
 
 /*# sourceMappingURL=styles.css.map */
+

@@ -4,8 +4,16 @@ body {
   line-height: 1.4;
   cursor: url("../images/babyyodapointer.svg"), default;
 }
-$text-color: #ffe81f;
+
+@font-face {
+  font-family: "Franklin Gothic Condensed";
+  src: local("Franklin Gothic Condensed"),
+    url("/fonts/Franklin Gothic Condensed.woff") format("woff");
+}
+
+$text-color: rgba(255, 232, 31, 0.8);
 a.href {
+  display: inline-block;
   color: $text-color;
   &:hover {
     color: black;
@@ -41,7 +49,29 @@ section.sky {
   position: fixed;
 }
 
-.layer2 {
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  &_image {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+    height: auto;
+    width: auto;
+    max-width: 250px;
+    padding: 18px;
+    border-radius: 50%;
+    border: solid 6px #ffe81f;
+    box-shadow: 000000 0px 0px 27px 3px;
+    color: #000000;
+  }
+}
+
+.left_body_area {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -72,16 +102,58 @@ section.sky {
 
 .link {
   cursor: url("../images/babyyodapointer.svg"), pointer;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 1s;
   color: $text-color;
+  transition: all 0.3s;
+  &:hover {
+    border-color: $text-color;
+  }
 }
+
 .container {
-  perspective: 650px;
+  // perspective: 650px;
   transform-origin: center;
+  justify-content: center;
+  .block_grid {
+    display: grid;
+    font-size: 30px;
+    grid-template-columns: auto;
+    grid-column-gap: 20px;
+    justify-self: center;
+    section.block {
+      z-index: 3;
+      transition: all 0.2s ease-in-out;
+      grid-gap: 20px;
+      max-width: 50%;
+      &.mobile_only {
+        display: none;
+      }
+      border-radius: 20px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      font-family: "Franklin Gothic Condensed";
+
+      // font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+      font-weight: 600;
+      line-height: 1.6;
+      text-transform: uppercase;
+      text-align: justify;
+      color: $text-color;
+      margin-bottom: 32px;
+      &.h2 {
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+  }
+
   .intro {
     position: absolute;
     display: flex;
-    z-index: 1;
+    z-index: 3;
     animation: intro 8s ease-out;
     color: #ffe81f !important;
     opacity: 0;
@@ -103,9 +175,10 @@ section.sky {
     font-weight: 600;
     line-height: 1.6;
     font-size: 50px;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: "Franklin Gothic Condensed";
+    // font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     text-align: center;
-    color: rgba(255, 232, 31, 0.8);
+    color: $text-color;
     margin-bottom: 32px;
   }
 
@@ -130,29 +203,27 @@ section.sky {
     }
   }
   transform-style: preserve-3d;
-  transform: scale(0.85);
   position: absolute;
-  border-radius: 25px;
-  background: rgb(153, 0, 0);
-  background: -moz-linear-gradient(
-    148deg,
-    rgba(153, 0, 0, 1) 0%,
-    rgba(17, 16, 0, 1) 50%,
-    rgba(0, 35, 149, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    148deg,
-    rgba(153, 0, 0, 1) 0%,
-    rgba(17, 16, 0, 1) 50%,
-    rgba(0, 35, 149, 1) 100%
-  );
-  background: linear-gradient(
-    148deg,
-    rgba(153, 0, 0, 1) 0%,
-    rgba(17, 16, 0, 1) 50%,
-    rgba(0, 35, 149, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000",endColorstr="#002395",GradientType=1);
+  // background: rgb(153, 0, 0);
+  // background: -moz-linear-gradient(
+  //   148deg,
+  //   rgba(153, 0, 0, 1) 0%,
+  //   rgba(17, 16, 0, 1) 50%,
+  //   rgba(0, 35, 149, 1) 100%
+  // );
+  // background: -webkit-linear-gradient(
+  //   148deg,
+  //   rgba(153, 0, 0, 1) 0%,
+  //   rgba(17, 16, 0, 1) 50%,
+  //   rgba(0, 35, 149, 1) 100%
+  // );
+  // background: linear-gradient(
+  //   148deg,
+  //   rgba(153, 0, 0, 1) 0%,
+  //   rgba(17, 16, 0, 1) 50%,
+  //   rgba(0, 35, 149, 1) 100%
+  // );
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000",endColorstr="#002395",GradientType=1);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -174,6 +245,7 @@ section.sky {
     border-radius: 4px;
     padding: 23px;
     margin: 25px;
+    display: grid;
     .footer {
       .paragraph_footer {
         .link {
@@ -187,67 +259,16 @@ section.sky {
         font-size: 12px;
       }
     }
-    .avatar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      &_image {
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          transform: scale(1.1);
-        }
-        height: auto;
-        width: auto;
-        max-width: 250px;
-        padding: 18px;
-        border-radius: 50%;
-        border: solid 6px #ffe81f;
-        box-shadow: 000000 0px 0px 27px 3px;
-        color: #000000;
-      }
-    }
   }
-  .header {
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      // transform: scale(1.05);
-      // background-color: rgba(255, 232, 31, 1);
-      // color: #000000;
-    }
-    &.mobile_only {
-      display: none;
-    }
-    &.click {
-      &:hover {
-        color: #000;
-      }
-      cursor: pointer;
-    }
-    background-color: #000;
-    border-radius: 4px;
-    border: solid 2px rgba(255, 232, 31, 0.28);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    font-weight: 600;
-    line-height: 1.6;
 
-    text-align: center;
-    color: rgba(255, 232, 31, 0.8);
-    margin-bottom: 32px;
-    &.h2 {
-      font-size: 20px;
-      font-weight: 300;
-    }
-  }
   .content {
     .portfolio_item {
       .button {
         width: auto;
         font-weight: 600;
-        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        font-family: "Franklin Gothic Condensed";
+
+        // font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
         line-height: 1.6;
 
         padding: 20px;
@@ -290,7 +311,13 @@ section.sky {
 @media screen and (max-width: 736px) {
   .container {
     &_inner {
-      .header {
+      .block_grid {
+        display: grid;
+        grid-template-columns: auto;
+        font-size: 18px;
+
+      }
+      .block {
         &.mobile_only {
           display: flex;
         }
