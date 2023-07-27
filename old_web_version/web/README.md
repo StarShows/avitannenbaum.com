@@ -5,7 +5,7 @@
 
 ## the repository containing algorithms, scripts projects and apps by Alex Tannenbaum.
 
-Updated on date: july 4 2023
+Updated on date: july 26 2023
 
 To start the project, RUN `npm start`. visit this address locally:
   http://127.0.0.1:3002
