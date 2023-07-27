@@ -1,0 +1,27 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "mongodb/brew"
+tap "ngrok/ngrok"
+brew "python@3.10", link: false
+brew "azure-cli"
+brew "gh"
+brew "helm", link: false
+brew "openssl@3", link: false
+brew "python@3.9", link: false
+brew "mongodb/brew/mongodb-community"
+vscode "Dart-Code.dart-code"
+vscode "Dart-Code.flutter"
+vscode "esbenp.prettier-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.cpptools"
+vscode "SimonSiefke.svg-preview"
+vscode "streetsidesoftware.code-spell-checker"

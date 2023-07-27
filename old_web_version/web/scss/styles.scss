@@ -7,8 +7,30 @@ body {
 $text-color: #ffe81f;
 a.href {
   color: $text-color;
-  &:hover{
+  &:hover {
     color: black;
+  }
+}
+
+.box_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.box_green {
+  background-color: green;
+  padding: 15px 24px;
+  font-size: 24px;
+  margin: 24px 0px;
+  text-align: center;
+  max-width: max-content;
+  border-radius: 4px;
+  &a {
+    cursor: pointer;
   }
 }
 
@@ -57,11 +79,11 @@ section.sky {
   perspective: 650px;
   transform-origin: center;
   .intro {
-    position: absolute;m
+    position: absolute;
     display: flex;
     z-index: 1;
     animation: intro 8s ease-out;
-    color: #ffe81f!important;
+    color: #ffe81f !important;
     opacity: 0;
     // transform-origin: 50% 100%;
     transform: scale(0.01);
@@ -141,7 +163,7 @@ section.sky {
   -o-background-size: cover;
   background-size: cover;
   position: relative;
-  color: $text-color!important;
+  color: $text-color !important;
   width: 100%;
   margin: 0px;
   display: flex;
@@ -155,7 +177,7 @@ section.sky {
     .footer {
       .paragraph_footer {
         .link {
-          span{
+          span {
             color: $text-color;
           }
         }
@@ -228,14 +250,14 @@ section.sky {
         font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
         line-height: 1.6;
 
-        padding: 10px;
+        padding: 20px;
         background-color: rgba(153, 0, 0, 0.6);
         transition: background-color 0.3s;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 4px;
+        border-radius: 50px;
         font-size: 20px;
         &:hover {
           background-color: rgba(226, 36, 58, 0.8);
