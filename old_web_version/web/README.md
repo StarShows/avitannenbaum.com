@@ -3,9 +3,9 @@
 
 ## Theres a subdirectory here called " Portfolio - React" which contains a new react project im developing to practice my reactjs skills.
 
-## the repository containing algorithms, scripts projects and apps by Avi Tannenbaum.
+## the repository containing algorithms, scripts projects and apps by Alex Tannenbaum.
 
-Updated on date: August 26 2019
+Updated on date: july 4 2023
 
 To start the project, RUN `npm start`. visit this address locally:
   http://127.0.0.1:3002
